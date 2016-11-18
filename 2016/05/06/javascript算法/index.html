@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        javascript常用的操作与算法 | axetroy&#39;s blog
+    </title>
+    
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+    
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="axetroy">
+    <meta name="description" content="专注前端开发">
+    <meta name="keywords" content="null">
+    
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+    
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="axetroy&#39;s blog">
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="javascript常用的操作与算法 | axetroy&#39;s blog">
+    <meta property="og:description" content="专注前端开发">
+    
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+    
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
+    
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
+    
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+    
+    <!-- Custom Head -->
+    
+</head>
+	
+	
+
+    <body id="scheme-Paradox">
+
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#字符串操作"><span class="post-toc-number">1.</span> <span class="post-toc-text">字符串操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#英文首字母大写"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">英文首字母大写</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#链式写法与驼峰式写法的转换"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">链式写法与驼峰式写法的转换</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#字符串反转"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">字符串反转</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#数组操作"><span class="post-toc-number">2.</span> <span class="post-toc-text">数组操作</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#min到max的n个不重复的随机数"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">min到max的n个不重复的随机数</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#数组去重复"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">数组去重复</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#找出字符串中，重复次数最多的字符，以及重复的次数"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">找出字符串中，重复次数最多的字符，以及重复的次数</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#排序"><span class="post-toc-number">3.</span> <span class="post-toc-text">排序</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#按照数字大小，排序一维数组"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">按照数字大小，排序一维数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#排序由对象组成的数组"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">排序由对象组成的数组</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#快速排序法"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">快速排序法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#冒泡排序法"><span class="post-toc-number">3.4.</span> <span class="post-toc-text">冒泡排序法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#选择排序法-未完善"><span class="post-toc-number">3.5.</span> <span class="post-toc-text">选择排序法(未完善)</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#插入排序法"><span class="post-toc-number">3.6.</span> <span class="post-toc-text">插入排序法</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#希尔排序"><span class="post-toc-number">3.7.</span> <span class="post-toc-text">希尔排序</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#查找"><span class="post-toc-number">4.</span> <span class="post-toc-text">查找</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#线下查找"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">线下查找</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#二分查找"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">二分查找</span></a></li></ol></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		
+			<!-- Random Thumbnail -->
+			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+				<script>
+    
+    var randomNum;
+    randomNum = Math.floor(Math.random() * 5 + 1);
+    
+    $(".post_thumbnail-random").css('background-image', 'url(' + '/img/random/' + randomNum + '.png' + ')');
+    
+</script>
+
+		
+	
+        <p class="article-headline-p">
+            javascript常用的操作与算法
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>axetroy</strong>
+        <span>5月 06, 2016</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/javascript/">javascript</a>
+    </ul>
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    
+    
+    
+    
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=javascript常用的操作与算法&url=http://yoursite.com//2016/05/06/javascript算法/index.html&via=axetroy" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+    
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/05/06/javascript算法/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+    
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=javascript常用的操作与算法&url=http://yoursite.com//2016/05/06/javascript算法/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+</ul>
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<h2 id="字符串操作"><a href="#字符串操作" class="headerlink" title="字符串操作"></a>字符串操作</h2><h3 id="英文首字母大写"><a href="#英文首字母大写" class="headerlink" title="英文首字母大写"></a>英文首字母大写</h3><h3 id="链式写法与驼峰式写法的转换"><a href="#链式写法与驼峰式写法的转换" class="headerlink" title="链式写法与驼峰式写法的转换"></a>链式写法与驼峰式写法的转换</h3><h3 id="字符串反转"><a href="#字符串反转" class="headerlink" title="字符串反转"></a>字符串反转</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//字符串反转(比如：ABC -&gt; CBA)</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">inverse</span>(<span class="params">s</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> arr = s.split(<span class="string">''</span>);</div><div class="line">  <span class="keyword">var</span> i = <span class="number">0</span>, j = arr.length - <span class="number">1</span>;</div><div class="line">  <span class="keyword">while</span> (i &lt; j) &#123;</div><div class="line">    <span class="keyword">var</span> t = arr[i];</div><div class="line">    arr[i] = arr[j];</div><div class="line">    arr[j] = t;</div><div class="line">    i++;</div><div class="line">    j--;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> arr.join(<span class="string">''</span>);</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> str = <span class="string">'abc'</span>;</div><div class="line">inverse(str);   <span class="comment">// 'cba';</span></div></pre></td></tr></table></figure>
+<h2 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h2><h3 id="min到max的n个不重复的随机数"><a href="#min到max的n个不重复的随机数" class="headerlink" title="min到max的n个不重复的随机数"></a>min到max的n个不重复的随机数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 生成n个不重复的随机数</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">random_no_repeat</span>(<span class="params">min, max, n</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> result = [];</div><div class="line">  <span class="keyword">let</span> temp = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = min; i &lt;= max; i++) &#123;</div><div class="line">    temp.push(i);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">for</span> (; n--;) &#123;</div><div class="line">    <span class="keyword">let</span> index = <span class="built_in">parseInt</span>(<span class="built_in">Math</span>.random() * temp.length, <span class="number">10</span>);</div><div class="line">    result.push(temp[index]);</div><div class="line">    temp.splice(index, <span class="number">1</span>);</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line">random_no_repeat(<span class="number">15</span>, <span class="number">20</span>, <span class="number">5</span>);		<span class="comment">// [15, 17, 20, 19, 18]</span></div><div class="line">random_no_repeat(<span class="number">1</span>, <span class="number">100</span>, <span class="number">10</span>)		<span class="comment">// [95, 13, 96, 61, 67, 83, 35, 73, 74, 75]</span></div></pre></td></tr></table></figure>
+<a id="more"></a>
+<h3 id="数组去重复"><a href="#数组去重复" class="headerlink" title="数组去重复"></a>数组去重复</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">unique</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">let</span> result = [];</div><div class="line">  <span class="keyword">let</span> hash = &#123;&#125;;</div><div class="line">  arr.forEach(<span class="function">(<span class="params">v</span>)=&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (!hash[v]) &#123;</div><div class="line">      result.push(v);</div><div class="line">      hash[v] = <span class="literal">true</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> arr = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">5</span>];</div><div class="line">unique(arr)		<span class="comment">// [1, 2, 3, 4, 5, 6]</span></div></pre></td></tr></table></figure>
+<h3 id="找出字符串中，重复次数最多的字符，以及重复的次数"><a href="#找出字符串中，重复次数最多的字符，以及重复的次数" class="headerlink" title="找出字符串中，重复次数最多的字符，以及重复的次数"></a>找出字符串中，重复次数最多的字符，以及重复的次数</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 找出字符串中，重复次数最多的字符</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">match_str</span>(<span class="params">str</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> result = &#123;</div><div class="line">    <span class="attr">character</span>: <span class="string">''</span>,</div><div class="line">    <span class="attr">times</span>: <span class="number">0</span></div><div class="line">  &#125;;</div><div class="line">  <span class="keyword">var</span> hash = &#123;&#125;;</div><div class="line">  str.split(<span class="string">''</span>).forEach(<span class="function">(<span class="params">character</span>)=&gt;</span> &#123;</div><div class="line">    <span class="keyword">if</span> (!hash[character]) &#123;</div><div class="line">      hash[character] = <span class="number">1</span>;</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      hash[character]++;</div><div class="line">    &#125;</div><div class="line">  &#125;);</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> character <span class="keyword">in</span> hash) &#123;</div><div class="line">    <span class="keyword">let</span> times = hash[character];</div><div class="line">    <span class="keyword">if</span> (times &gt; result.times) &#123;</div><div class="line">      result.character = character;</div><div class="line">      result.times = times;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> s = <span class="string">"asddasdddddd"</span>;</div><div class="line">match_str(s);		<span class="comment">// Object &#123;character: "d", times: 8&#125;</span></div></pre></td></tr></table></figure>
+<h2 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h2><h3 id="按照数字大小，排序一维数组"><a href="#按照数字大小，排序一维数组" class="headerlink" title="按照数字大小，排序一维数组"></a>按照数字大小，排序一维数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 从小到达排序</span></div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">11</span>, <span class="number">55</span>, <span class="number">12</span>, <span class="number">32</span>, <span class="number">55</span>].sort(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a &gt; b;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 结果：[1, 2, 3, 4, 11, 12, 32, 55, 55]</span></div><div class="line"></div><div class="line"><span class="comment">// 从大到小</span></div><div class="line">[<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">11</span>, <span class="number">55</span>, <span class="number">12</span>, <span class="number">32</span>, <span class="number">55</span>].sort(<span class="function"><span class="keyword">function</span> (<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> a &lt; b;</div><div class="line">&#125;);</div><div class="line"><span class="comment">// 结果：[55, 55, 32, 12, 11, 4, 3, 2, 1]</span></div></pre></td></tr></table></figure>
+<h3 id="排序由对象组成的数组"><a href="#排序由对象组成的数组" class="headerlink" title="排序由对象组成的数组"></a>排序由对象组成的数组</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> arr = [</div><div class="line">  &#123;<span class="attr">name</span>: <span class="string">'yr'</span>, <span class="attr">age</span>: <span class="number">12</span>&#125;,</div><div class="line">  &#123;<span class="attr">name</span>: <span class="string">'ad'</span>, <span class="attr">age</span>: <span class="number">18</span>&#125;,</div><div class="line">  &#123;<span class="attr">name</span>: <span class="string">'hg'</span>, <span class="attr">age</span>: <span class="number">13</span>&#125;,</div><div class="line">  &#123;<span class="attr">name</span>: <span class="string">'cz'</span>, <span class="attr">age</span>: <span class="number">16</span>&#125;</div><div class="line">];</div><div class="line"></div><div class="line"><span class="comment">// 按照年龄排序，又小到大</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span> (<span class="params">item1, item2</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item1.age &gt; item2.age</div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="comment">// 按照姓名排序</span></div><div class="line">arr.sort(<span class="function"><span class="keyword">function</span> (<span class="params">item1, item2</span>) </span>&#123;</div><div class="line">  <span class="keyword">return</span> item1.name &gt; item2.name</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<h3 id="快速排序法"><a href="#快速排序法" class="headerlink" title="快速排序法"></a>快速排序法</h3><p>关于快速排序法，更多详细原理，可以看阮一峰老师的博客，<a href="http://www.ruanyifeng.com/blog/2011/04/quicksort_in_javascript.html" target="_blank" rel="external">快速排序（Quicksort）的Javascript实现</a></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> quickSort = <span class="function"><span class="keyword">function</span> (<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (arr.length &lt;= <span class="number">1</span>) &#123;</div><div class="line">    <span class="keyword">return</span> arr;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">var</span> pivotIndex = <span class="built_in">Math</span>.floor(arr.length / <span class="number">2</span>);</div><div class="line">  <span class="comment">// 快速排序的基准点</span></div><div class="line">  <span class="keyword">var</span> pivot = arr.splice(pivotIndex, <span class="number">1</span>)[<span class="number">0</span>];</div><div class="line">  <span class="keyword">var</span> left = [];</div><div class="line">  <span class="keyword">var</span> right = [];</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (arr[i] &lt; pivot) &#123;</div><div class="line">      left.push(arr[i]);</div><div class="line">    &#125; <span class="keyword">else</span> &#123;</div><div class="line">      right.push(arr[i]);</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="comment">// 最后递归，不断重复这个过程</span></div><div class="line">  <span class="keyword">return</span> quickSort(left).concat([pivot], quickSort(right));</div><div class="line">&#125;;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">31</span>, <span class="number">41</span>, <span class="number">23</span>, <span class="number">53</span>, <span class="number">12</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">66</span>];</div><div class="line">quickSort(arr);   <span class="comment">// [3, 4, 12, 23, 31, 41, 53, 66]</span></div></pre></td></tr></table></figure>
+<h3 id="冒泡排序法"><a href="#冒泡排序法" class="headerlink" title="冒泡排序法"></a>冒泡排序法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">emitSort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> result = arr.slice();</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; result.length - <span class="number">1</span>; i++) &#123;<span class="comment">//比较的次数是length-1</span></div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; result.length - <span class="number">1</span> - i; j++) &#123;</div><div class="line">      <span class="keyword">if</span> (result[j] &gt; result[j + <span class="number">1</span>]) &#123;</div><div class="line">        <span class="keyword">var</span> tmp = result[j];</div><div class="line">        result[j] = result[j + <span class="number">1</span>];</div><div class="line">        result[j + <span class="number">1</span>] = tmp;</div><div class="line">      &#125;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">31</span>, <span class="number">22</span>, <span class="number">51</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">23</span>, <span class="number">55</span>];</div><div class="line">emitSort(arr);    <span class="comment">// [1, 6, 22, 23, 31, 51, 55]</span></div></pre></td></tr></table></figure>
+<h3 id="选择排序法-未完善"><a href="#选择排序法-未完善" class="headerlink" title="选择排序法(未完善)"></a>选择排序法(未完善)</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">selectSort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> min, tmp, result = arr.slice();</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> out = <span class="number">0</span>; out &lt; result.length - <span class="number">1</span>; out++) &#123;</div><div class="line">    min = out;</div><div class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> inner = out + <span class="number">1</span>; inner &lt; result.length; inner++) &#123;</div><div class="line">      <span class="keyword">if</span> (result[inner] &lt; result[min]) &#123;</div><div class="line">        min = inner;</div><div class="line">      &#125;</div><div class="line">      <span class="comment">//将最小的项移动到左侧</span></div><div class="line">      tmp = result[out];</div><div class="line">      result[out] = result[min];</div><div class="line">      result[min] = tmp;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">31</span>, <span class="number">22</span>, <span class="number">51</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">23</span>, <span class="number">55</span>];</div><div class="line">selectSort(arr);    <span class="comment">// [1, 6, 22, 23, 31, 51, 55]</span></div></pre></td></tr></table></figure>
+<h3 id="插入排序法"><a href="#插入排序法" class="headerlink" title="插入排序法"></a>插入排序法</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">insertSort</span>(<span class="params">arr</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> result = arr.slice();</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> out = <span class="number">1</span>; out &lt; result.length; out++) &#123;</div><div class="line">    <span class="keyword">var</span> tmp = result[out];</div><div class="line">    <span class="keyword">var</span> inner = out;</div><div class="line">    <span class="keyword">while</span> (result[inner - <span class="number">1</span>] &gt; tmp) &#123;</div><div class="line">      result[inner] = result[inner - <span class="number">1</span>];</div><div class="line">      --inner;</div><div class="line">    &#125;</div><div class="line">    result[inner] = tmp;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> result;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="number">31</span>, <span class="number">22</span>, <span class="number">51</span>, <span class="number">1</span>, <span class="number">6</span>, <span class="number">23</span>, <span class="number">55</span>];</div><div class="line">insertSort(arr);    <span class="comment">// [1, 6, 22, 23, 31, 51, 55]</span></div></pre></td></tr></table></figure>
+<h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// TODO</span></div></pre></td></tr></table></figure>
+<h2 id="查找"><a href="#查找" class="headerlink" title="查找"></a>查找</h2><h3 id="线下查找"><a href="#线下查找" class="headerlink" title="线下查找"></a>线下查找</h3><p>虽然说ECMA5的Array由indexOf方法，但是不妨我们可以学习</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">linearSearch</span>(<span class="params">arr, value</span>) </span>&#123;</div><div class="line">  <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; arr.length; i++) &#123;</div><div class="line">    <span class="keyword">if</span> (arr[i] === value) &#123;</div><div class="line">      <span class="keyword">return</span> i;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="string">'axe'</span>, <span class="string">'troy'</span>];</div><div class="line">linearSearch(arr, <span class="string">'troy'</span>);   <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<h3 id="二分查找"><a href="#二分查找" class="headerlink" title="二分查找"></a>二分查找</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">binarySearch</span>(<span class="params">arr, value</span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> low = <span class="number">0</span>, high = arr.length - <span class="number">1</span>;</div><div class="line">  <span class="keyword">while</span> (low &lt;= high) &#123;</div><div class="line">    <span class="keyword">var</span> mid = <span class="built_in">Math</span>.floor((low + high) / <span class="number">2</span>);</div><div class="line">    <span class="keyword">if</span> (value == arr[mid]) &#123;</div><div class="line">      <span class="keyword">return</span> mid;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">if</span> (value &lt; arr[mid]) &#123;</div><div class="line">      high = mid - <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> &#123;</div><div class="line">      low = mid + <span class="number">1</span>;</div><div class="line">    &#125;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> <span class="number">-1</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">var</span> arr = [<span class="string">'axe'</span>,<span class="string">'troy'</span>,<span class="string">'hello'</span>,<span class="string">'world'</span>];</div><div class="line">binarySearch(arr,<span class="string">'troy'</span>);   <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+
+
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+        <a href="/2016/05/06/javascript模拟堆栈/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/04/30/一些代码片段/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="axetroy's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        troy450409405@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">四月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">4</span></a>
+        </ul>
+    </li>
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+		<li>
+			<a href="/about" title="about">
+				about
+			</a>
+		</li>
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">20</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+	</div>
+    
+    <!-- Sidebar Sponsor -->
+    
+
+
+</aside>
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+    
+    
+    <!-- Facebook -->
+    
+    
+    
+    <!-- Google + -->
+    
+    
+    
+    <!-- Weibo -->
+    
+    
+    
+    <!-- Instagram -->
+    
+    
+    
+    <!-- Tumblr -->
+    
+    
+    
+    <!-- Github -->
+    
+    <a href="https://github.com/axetroy" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;axetroy's blog</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    // Post_Toc parent position fixed
+    $(window).load(function() {
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+            </main>
+        </div>
+		
+    </body>
+		
+	
+</html>

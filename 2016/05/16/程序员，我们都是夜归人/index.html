@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!-- Title -->
+    
+    <title>
+        程序员，我们都是夜归人 | axetroy&#39;s blog
+    </title>
+    
+    <!-- Favicons -->
+    <link rel="icon shortcut" type="image/ico" href="/img/favicon.png">
+    <link rel="icon" sizes="192x192" href="/img/favicon.png">
+    <link rel="apple-touch-icon" href="/img/favicon.png">
+    
+    <!-- Meta & INfo -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0097A7">
+    <meta name="author" content="axetroy">
+    <meta name="description" content="专注前端开发">
+    <meta name="keywords" content="null">
+    
+    <!--iOS -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="Title">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="480">
+    
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="axetroy&#39;s blog">
+    
+    <!-- The Open Graph protocol -->
+    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:type" content="blog">
+    <meta property="og:title" content="程序员，我们都是夜归人 | axetroy&#39;s blog">
+    <meta property="og:description" content="专注前端开发">
+    
+     <!--[if lte IE 9]>
+        <link rel="stylesheet" href="/css/ie-blocker.css">
+        
+        
+            <script src="/js/ie-blocker.zhCN.js"></script>
+        
+    <![endif]-->
+    
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="/css/material.min.css">
+    <link rel="stylesheet" href="/css/style.min.css">
+    <!-- Config CSS -->
+
+
+<!-- Other Styles -->
+<style>
+	body, html{
+		font-family: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+	}
+	
+    a{
+        color: #00838F
+    }
+    
+    .mdl-card__media,
+    #search-label,
+    #search-form-label:after,
+    #scheme-Paradox .hot_tags-count,
+    #scheme-Paradox .sidebar_archives-count,
+    #scheme-Paradox .sidebar-colored .sidebar-header,
+    #scheme-Paradox .sidebar-colored .sidebar-badge{
+        background-color: #0097A7 !important
+    }
+    
+	/* Sidebar User Drop Down Menu Text Color */
+	#scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:hover,
+    #scheme-Paradox .sidebar-colored .sidebar-nav>.dropdown>.dropdown-menu>li>a:focus{
+        color: #0097A7 !important
+    }
+    
+    #post_entry-right-info,
+    .sidebar-colored .sidebar-nav li:hover > a,
+    .sidebar-colored .sidebar-nav li:hover > a i,
+    .sidebar-colored .sidebar-nav li > a:hover,
+    .sidebar-colored .sidebar-nav li > a:hover i,
+    .sidebar-colored .sidebar-nav li > a:focus i,
+    .sidebar-colored .sidebar-nav > .open > a,
+    .sidebar-colored .sidebar-nav > .open > a:hover,
+    .sidebar-colored .sidebar-nav > .open > a:focus,
+    #ds-reset #ds-ctx .ds-ctx-entry .ds-ctx-head a{
+        color: #0097A7 !important
+    }
+    
+    .toTop{
+        background: #757575 !important
+    }
+		
+	.material-layout .material-post>.material-nav,
+	.material-layout .material-index>.material-nav,
+	.material-nav a{
+		color: #757575;
+	}
+		
+	#scheme-Paradox .MD-burger-layer {
+		background-color: #757575;
+	}
+
+	#scheme-Paradox #post-toc-trigger-btn{
+		color: #757575;
+	}
+	
+	.post-toc a:hover{
+		color: #00838F;
+		text-decoration: underline;
+	}
+</style>
+
+
+<!-- Theme Background Related-->
+
+    <style>
+        body{
+            background-color: #F5F5F5
+        }
+		
+		/* blog_info bottom background */
+        #scheme-Paradox .material-layout .something-else .mdl-card__supporting-text{
+            background-color: #fff;
+        }
+    </style>
+
+
+
+
+<!-- Fade Effect -->
+
+    <style>
+        .fade {
+            transition: all 800ms linear;
+            -webkit-transform: translate3d(0,0,0);
+            -moz-transform: translate3d(0,0,0);
+            -ms-transform: translate3d(0,0,0);
+            -o-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+            opacity: 1;
+        }
+
+        .fade.out{
+            opacity: 0;
+        }
+    </style>
+
+	<script src="/js/jquery.min.js"></script>
+	
+	<!-- UC Browser Compatible-->
+	<script>
+		var agent = navigator.userAgent.toLowerCase();
+		if(agent.indexOf('ucbrowser')>0) {
+			document.write('<link rel="stylesheet" href="/css/uc.css">');
+		   alert('由于 UC 浏览器使用极旧的内核，而本网站使用了一些新的特性。\n为了您能更好的浏览，推荐使用 Chrome 或 Firefox 浏览器。');
+		}
+	</script>
+    
+    <!-- Custom Head -->
+    
+</head>
+	
+	
+
+    <body id="scheme-Paradox">
+
+		
+        <div class="material-layout  mdl-js-layout has-drawer is-upgraded">
+				
+			
+			
+            <!-- Main Container -->
+            <main class="material-layout__content" id="main">
+				
+                <!-- Top Anchor -->
+                <div id="top"></div>
+				
+				
+                <!-- Hamburger Button -->
+                <button class="MD-burger-icon sidebar-toggle">
+                    <span class="MD-burger-layer"></span>
+                </button>
+				
+				
+                
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
+
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
+			
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#能力不足"><span class="post-toc-number">1.</span> <span class="post-toc-text">能力不足</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#环境制约"><span class="post-toc-number">2.</span> <span class="post-toc-text">环境制约</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#公司制度"><span class="post-toc-number">3.</span> <span class="post-toc-text">公司制度</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#进度压力"><span class="post-toc-number">4.</span> <span class="post-toc-text">进度压力</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#个人爱好"><span class="post-toc-number">5.</span> <span class="post-toc-text">个人爱好</span></a></li></ol>
+		
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
+	
+		
+			<!-- Random Thumbnail -->
+			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
+				<script>
+    
+    var randomNum;
+    randomNum = Math.floor(Math.random() * 5 + 1);
+    
+    $(".post_thumbnail-random").css('background-image', 'url(' + '/img/random/' + randomNum + '.png' + ')');
+    
+</script>
+
+		
+	
+        <p class="article-headline-p">
+            程序员，我们都是夜归人
+        </p>
+    </div>
+
+	
+
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/img/avatar.png" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>axetroy</strong>
+        <span>5月 16, 2016</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        
+    </ul>
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    
+    
+    
+    
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=程序员，我们都是夜归人&url=http://yoursite.com//2016/05/16/程序员，我们都是夜归人/index.html&via=axetroy" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+    
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/05/16/程序员，我们都是夜归人/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+    
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=程序员，我们都是夜归人&url=http://yoursite.com//2016/05/16/程序员，我们都是夜归人/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+</ul>
+</div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<p>转自<strong>瞬息之间</strong>写的<a href="http://mp.weixin.qq.com/s?__biz=MzAxMTEyOTQ5OQ==&amp;mid=2650610540&amp;idx=1&amp;sn=c54063d608648ffd1d53c3cb1e04393f#rd" target="_blank" rel="external">程序员，我们都是夜归人</a></p>
+<p>音响随机播放着音乐，偶然跳出一首《都是夜归人》的乐曲，让我不禁想起程序员这个群体，夜归人也是不少的啊。恩，我这里说的「夜归」正是指的加班，进入这个行业，成为程序员谁没加过班呢，所以我们都是夜归人啊。</p>
+<p>加班是一个行业竞争激烈的表现，回想下读中学时虽不加班却要加课，因为高考的竞争很激烈啊。加班也是一个行业兴旺的表现，你看产能过剩的行业连工都不开了，哪里还需要加班。这些是加班的行业宏观原因，那么于个人微观来说，为什么需要加班呢？</p>
+<h3 id="能力不足"><a href="#能力不足" class="headerlink" title="能力不足"></a>能力不足</h3><p>新入行的程序员加班的最多，很大一个原因是能力是不足以满足工作的需要，这里说的是整体的比例而言，不针对个体。我刚毕业工作时也是天天加班的，原因正是发现为了应对工作，需要学习的东西太多，边学边做，效率也不够高，自然无法闲庭信步，只能加班加点。</p>
+<p>大学里专业上的东西学得宽，学得泛，而且离工作实际需要还存在一道从理论到实践之间的鸿沟。所以对于刚入行的程序员就需要短期内快速地跨越这道鸿沟，不得已加班加点的学和做，一旦跨越过后后面还需要经常的加班原因可能就出在其他方面了。</p>
+<p>应对能力不足导致的加班，除了自己认了还能埋怨谁呢，同一所学校同一个专业同一届毕业的学生，能力强弱有时也是相差也很悬殊。我承认大学里也是放松了自己，曾经埋下的坑，后来也是慢慢自己来填的，努力要趁早啊。</p>
+<a id="more"></a>
+<h3 id="环境制约"><a href="#环境制约" class="headerlink" title="环境制约"></a>环境制约</h3><p>这里指工作环境的一些制约因素，比如：早年我在客户现场做项目，客户都是朝九晚五制，他们白天经常要过来和你讨论碰到的一些问题或需求，有时还要接接维护项目的技术支持电话，渐渐就发现在客户上班的朝九晚五期间基本就没法专心的写程序。所以当时我开发一般都放在晚上 6 点到 10 点之间，十点半是末班车再回去。</p>
+<p>另外一种情况是，以前做传统企业应用，要全国各地四处出差，而系统上线和数据割接什么的也只能在半夜三更来做。从夜深人静到天空泛白，在卖豆浆包子的早餐车旁和来上班的人群短暂相聚，再交错而过，走回公司的出租屋，倒头便睡。</p>
+<p>一次一个省级的大系统做全面割接，这样的日子持续了将近一个月，让我不禁开始思考起了这样工作和生活着的意义。这就是环境的现实，要么去适应当前的环境，要么去改变环境，这二者皆不易，还有第三条路就是换个环境，然后我便换了个。</p>
+<h3 id="公司制度"><a href="#公司制度" class="headerlink" title="公司制度"></a>公司制度</h3><p>我理解加班很多时候来自一种需要，而这种需要可能来自很多方面的原因，但如果有公司把加班作为一项制度固化下来，那真是再糟糕不过了。</p>
+<p>我以前曾有同事呆过一家把加班作为一种长期制度的公司，从周一到周四每晚都是固定加班到晚 9 点后，周末则临时决定是否加班。这咋一看比起如今的 「996」的强度是不如的，但有些公司的 996 可能是按需的并非一项固定制度。让你有事没事都必须呆到晚上 9 点后，而且公司内部网络控制严格的连外网都访问不了，当时 iPhone 尚未诞生，移动互联网不知为何物，这样的加班真是无聊透顶。</p>
+<p>十年过去，似乎这样愚蠢的公司制度还是不少。近期听闻一朋友所在的成都某游戏公司也差不多，虽然没有明确规定加班是公司制度，但考核员工绩效的主要标准就是看考勤表的工作时长。这样的潜规则比明制度更可恶，不过上有政策下有对策，住公司附近的员工 6 点一下班就闪人，晚上十一、二点后再到公司打卡。</p>
+<p>有的公司，加班是一种制度；有的公司，不加班是一种福利。确实有在招聘宣传上看到把不加班当作一种福利来宣传的公司。如果你不幸处在把加班当作制度的公司，我的建议是离开也请趁早啊。</p>
+<h3 id="进度压力"><a href="#进度压力" class="headerlink" title="进度压力"></a>进度压力</h3><p>因项目进度压力导致的加班看起来似乎合理，但不合理的地方是为何进度总有压力？这取决于项目的上线或交付时间点是如何确定的？有些是 Boss 头脑一热胸脯一拍就定下了，这类 Deadline 相对来说还有可转圜的余地，另外一类则更难转圜。</p>
+<p>我曾参与浙江电信的一个项目，当时它刚接手了联通 CDMA 的业务和用户并在建设 3G 网络。它在浙江卫视先打了广告明确在某月某日开始营业接受 3G 业务放号。之后它们才对后台的支撑系统招标建设，这基本就确定了严格的系统上线 Deadline 且几无转圜余地。</p>
+<p>知乎上有个问题：程序员如何不加班？最高票的回答是：换个好的项目经理来控制进度，给每个人安排合适的任务。可见很多程序员都认为加班是因为进度控制和任务安排不合理导致的，而进度管理正是软件工程的难点之一，这个问题真的只是换个好的项目经理就能有解了？</p>
+<p>进度问题本质是一个时间估算问题，一群程序员组成一个团队一起做一个项目，项目经理拆解了任务，每个程序员就需要对任务做一个工作量估算。这里重要的不是你需要做得有多快，重要的是你对自己的工作能力和工作量有个合理地估计。也就是给你一个任务，你要知道如果你用正常工作时间大概会花多久，而不是拍脑袋捶胸脯打保票下决心说要不吃不喝不眠不休保证完成任务。只有团队中每个人都能正确的估计时间，才能让团队的进度合理。但是能做到正确估计时间的，不论对程序员还是项目经理都是极难的。</p>
+<p>在我没开始写作前，看到像本篇这样长度的文章总以为作者可能灵感一闪，一挥而就，快则个把小时，慢则至多两小时。毕竟当年我们高考语文时两小时不仅要做完所有题目，还要写篇作文，所以会觉得两小时已是至多了。等我自己开始真正持续写作后，才发现自己的估算错的离谱。</p>
+<p>像这样一篇文章，两三千字，先不说创作，只说打完这些字你能估算准确自己需要多少时间么？（这里默默估算十秒）我们看下国际通用打字速度等级划分：</p>
+<ul>
+<li>学手 10-30   字/分钟</li>
+<li>聊手 30-60   字/分钟</li>
+<li>录手 60-90   字/分钟</li>
+<li>锐手 90-120  字/分钟</li>
+<li>高手 120-150 字/分钟</li>
+<li>专业 150-240 字/分钟</li>
+</ul>
+<p>我 2000 年开始用 QQ 打字聊天，打字经验 16 年，用拼音输入法，实际速度也就是聊手水平，平均 50 字/分钟。而未经刻意训练的大部分人可能都是这个水平而已，所以一篇三千字的文章光把它输入成文字按这个速度就需要一小时，而实际的构思创作时间一般是这个好几倍。如果写的还是技术文章，我通常还爱画技术图示（一图胜千言啊），画图还需要额外的时间。所以这样一篇文章 3、4 小时算快得，5、6 小时很正常，7、8 小时也不坏。</p>
+<p>你看自己的估算都如此不靠谱，所以一些项目经理才会把程序员的估算粗暴的乘以二或三，这样估算下来的项目进度你觉得能靠谱嘛，换个好的项目经理就能靠谱了？在埋怨项目进度不合理前，程序员需要先把自己写程序的时间估算准确了，有效的方式是通过「时间记录法」持续记录和跟踪自己的时间消耗，这真得可以有效地提高自己对时间的敏感度和估算准确度。</p>
+<h3 id="个人爱好"><a href="#个人爱好" class="headerlink" title="个人爱好"></a>个人爱好</h3><p>真的有人爱好加班么？我想没有，也许爱好的是其他，只是表象体现在了加班上，加的虽然是班，过的却是自己的人生。这点我想你们懂的。</p>
+<p>…</p>
+<p>加班对某些公司可能是一种制度，对个人可能是一种态度；不加班对某些公司可能是一种福利，对个人可能是一种能力。</p>
+<p>最后，写完本文真实耗时 4 小时 40 分钟。</p>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+
+
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/05/09/观察者模式，实现简单的promise/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
+
+				
+				
+					<!-- Overlay For Active Sidebar -->
+<div class="sidebar-overlay "></div>
+
+<!-- Material sidebar -->
+<aside id="sidebar" class="sidebar sidebar-colored  sidebar-fixed-left" role="navigation">
+	<div id="sidebar-main">
+	    <!-- Sidebar Header -->
+		<div class="sidebar-header header-cover" style="background-image: url(/img/sidebar_header.png);">
+    <!-- Top bar -->
+    <div class="top-bar"></div>
+
+    <!-- Sidebar toggle button -->
+    <button type="button" class="sidebar-toggle mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" style="display: initial;" data-upgraded=",MaterialButton,MaterialRipple">
+    <i class="material-icons">clear_all</i>
+    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></button>
+
+    <!-- Sidebar Avatar -->
+    <div class="sidebar-image">
+        <img src="/img/avatar.png" alt="axetroy's avatar">
+    </div>
+
+    <!-- Sidebar Email -->
+    <a data-toggle="dropdown" class="sidebar-brand" href="#settings-dropdown">
+        troy450409405@gmail.com
+        <b class="caret"></b>
+    </a>
+</div>
+
+		<!-- Sidebar Navigation  -->
+		<ul class="nav sidebar-nav">
+    <!-- User dropdown  -->
+    <li class="dropdown">
+        <ul id="settings-dropdown" class="dropdown-menu">
+			
+                <li>
+                    <a href="#" target="_blank" title="Email Me">
+						<i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element">email</i>
+                        Email Me
+                    </a>
+                </li>
+            
+        </ul>
+    </li>
+
+    <!-- Homepage -->
+    <li id="sidebar-first-li">
+        <a href="/" target="_self">
+            <i class="material-icons sidebar-material-icons">home</i>
+             主页
+        </a>
+    </li>
+
+    <!-- I'm Feeling Lucky -->
+<!--
+    <li class="dropdown">
+        <a href="" target="_self">
+            <i class="material-icons sidebar-material-icons">explore</i>
+             sidebar.imlucky
+        </a>
+    </li>
+-->
+
+	
+    <!-- Archives  -->
+    <li class="dropdown">
+        <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <i class="material-icons sidebar-material-icons">inbox</i>
+             归档
+            <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+            <li>
+            <a class="sidebar_archives-link" href="/archives/2016/05/">五月 2016<span class="sidebar_archives-count">5</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/04/">四月 2016<span class="sidebar_archives-count">4</span></a></li><li><a class="sidebar_archives-link" href="/archives/2016/01/">一月 2016<span class="sidebar_archives-count">7</span></a></li><li><a class="sidebar_archives-link" href="/archives/2015/12/">十二月 2015<span class="sidebar_archives-count">4</span></a>
+        </ul>
+    </li>
+
+    <!-- Divider -->
+    <li class="divider"></li>
+
+
+    <!-- Pages  -->
+	
+		<li>
+			<a href="/about" title="about">
+				about
+			</a>
+		</li>
+	
+
+    <!-- Article Numebr  -->
+    <li>
+        <a href="/archives">
+             文章总数
+             <span class="sidebar-badge">20</span>
+        </a>
+    </li>
+</ul>
+
+		<!-- Sidebar Divider -->
+		<div class="sidebar-divider"></div>
+
+		<!-- Sidebar Footer -->
+		<!-- 
+I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright, I will thank you so much.
+If you still want to delete the copyrights, could you still retain the first one? Which namely "Theme Material"
+It will not impact the appearance and can give developers a lot of support :)
+
+很高兴您使用并喜欢该主题，开发不易 十分谢谢与希望您可以保留一下版权声明。
+如果您仍然想删除的话 能否只保留第一项呢？即 "Theme Material"
+它不会影响美观并可以给开发者很大的支持。 :) 
+-->
+
+<!-- Theme Material -->
+<a href="https://github.com/viosey/hexo-theme-material"  class="sidebar-footer-text-a" target="_blank">
+	<div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		主题 - Material
+		<span class="sidebar-badge badge-circle">i</span>
+	</div>
+</a>
+
+<!-- Help & Support -->
+<!--
+<a href="mailto:hiviosey@gmail.com" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+		sidebar.help
+		<span class="mdl-button__ripple-container">
+			<span class="mdl-ripple"></span>
+		</span>
+	</div>
+</a>
+-->
+
+<!-- Feedback -->
+<!--
+<a href="https://github.com/viosey/hexo-theme-material/issues" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.feedback
+                    <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>
+-->
+
+<!-- Abount Theme -->
+<!--
+<a href="https://blog.viosey.com/index.php/Material.html" target="_blank" class="sidebar-footer-text-a">
+    <div class="sidebar-text mdl-button mdl-js-button mdl-js-ripple-effect sidebar-footer-text-div" data-upgraded=",MaterialButton,MaterialRipple">
+         sidebar.about_theme
+        <span class="mdl-button__ripple-container"><span class="mdl-ripple"></span></span></div>
+</a>-->
+
+	</div>
+    
+    <!-- Sidebar Sponsor -->
+    
+
+
+</aside>
+
+				
+				
+				
+					<!-- Footer Top Button -->
+					<div class="toTop-wrap">
+    <a href="#top" class="toTop">
+        <i class="material-icons footer_top-i">expand_less</i>
+    </a>
+</div>
+				
+				
+				<!--Footer-->
+<footer class="mdl-mini-footer" id="bottom">
+	
+	
+		<!-- Paradox Footer Left Section -->
+		<div class="mdl-mini-footer--left-section sns-list">
+    <!-- Twitter -->
+    
+    
+    
+    <!-- Facebook -->
+    
+    
+    
+    <!-- Google + -->
+    
+    
+    
+    <!-- Weibo -->
+    
+    
+    
+    <!-- Instagram -->
+    
+    
+    
+    <!-- Tumblr -->
+    
+    
+    
+    <!-- Github -->
+    
+    <a href="https://github.com/axetroy" target="view_window"><button class="mdl-mini-footer--social-btn social-btn" style="background-image: url(/img/footer/footer_ico-github.png);">
+        <span class="visuallyhidden">Github</span>
+    </button></a>
+    
+</div>
+
+
+		<!--Copyright-->
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;axetroy's blog</div>
+
+		<!-- Paradox Footer Right Section -->
+
+		<!-- 
+		I'm glad you use this theme, the development is no so easy, I hope you can keep the copyright.
+		It will not impact the appearance and can give developers a lot of support :)
+
+		很高兴您使用该主题，开发不易，希望您可以保留一下版权声明。
+		它不会影响美观并可以给开发者很大的支持。 :) 
+		-->
+
+		<div class="mdl-mini-footer--right-section">
+			<div>
+				<div class="footer-develop-div">Powered by <a href="https://hexo.io" target="_blank" class="footer-develop-a">Hexo</a></div>
+				<div class="footer-develop-div">Theme - <a href="https://github.com/viosey/hexo-theme-material" target="_blank" class="footer-develop-a">Material</a></div>
+			</div>
+		</div>
+	
+    
+</footer>
+                
+				<!-- Import File -->
+<script src="/js/js.min.js"></script>
+<script src="/js/nprogress.js"></script>
+
+<script type="text/javascript">
+    NProgress.configure({
+        showSpinner: true
+    });
+    NProgress.start();
+    
+    $('#nprogress .bar').css({
+        'background': '#FF4081'
+    });
+    $('#nprogress .peg').css({
+        'box-shadow': '0 0 10px #FF4081, 0 0 15px #FF4081'
+    });
+    $('#nprogress .spinner-icon').css({
+        'border-top-color': '#FF4081',
+        'border-left-color': '#FF4081'
+    });
+    
+    setTimeout(function() {
+        NProgress.done();
+        $('.fade').removeClass('out');
+    }, 800);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Swiftye -->
+
+
+<!-- Local Search-->
+
+
+<!-- Window Load-->
+<script>
+    // Post_Toc parent position fixed
+    $(window).load(function() {
+        $(".post-toc-wrap").parent(".mdl-menu__container").css("position", "fixed");
+    });
+</script>
+            </main>
+        </div>
+		
+    </body>
+		
+	
+</html>
