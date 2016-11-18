@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        写了几个AngularJS的小模块 | axetroy&#39;s blog
+        写了几个AngularJS的小模块 | Axetroy的幻想乡
     </title>
     
     <!-- Favicons -->
@@ -35,12 +35,12 @@
     <!-- Add to homescreen for Safari on iOS -->
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="axetroy&#39;s blog">
+    <meta name="apple-mobile-web-app-title" content="Axetroy的幻想乡">
     
     <!-- The Open Graph protocol -->
-    <meta property="og:url" content="http://yoursite.com">
+    <meta property="og:url" content="http://www.burningall.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="写了几个AngularJS的小模块 | axetroy&#39;s blog">
+    <meta property="og:title" content="写了几个AngularJS的小模块 | Axetroy的幻想乡">
     <meta property="og:description" content="专注前端开发">
     
      <!--[if lte IE 9]>
@@ -299,21 +299,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=写了几个AngularJS的小模块&url=http://yoursite.com//2016/04/07/写了几个AngularJS的小模块/index.html&via=axetroy" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=写了几个AngularJS的小模块&url=http://www.burningall.com//2016/04/07/写了几个AngularJS的小模块/index.html&via=axetroy" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://yoursite.com//2016/04/07/写了几个AngularJS的小模块/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://www.burningall.com//2016/04/07/写了几个AngularJS的小模块/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=写了几个AngularJS的小模块&url=http://yoursite.com//2016/04/07/写了几个AngularJS的小模块/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=写了几个AngularJS的小模块&url=http://www.burningall.com//2016/04/07/写了几个AngularJS的小模块/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -336,7 +336,7 @@
 <p>能储存js的各种类型的变量，布尔值，数字，字符串，数组，对象等，不能存函数</p>
 <p>而且封装好了一个<code>$watch</code>事件监听，监听指定的缓存变化时，所触发的函数，基于onstorage事件</p>
 <h3 id="at-compare"><a href="#at-compare" class="headerlink" title="at-compare"></a><a href="https://github.com/axetroy/at-compare" target="_blank" rel="external">at-compare</a></h3><p>Angular的compare指令，用于表单的对比</p>
-<p><a href="http://www.burningall.com/at-compare/" target="_blank" rel="external">demo</a></p>
+<p><a href="http://www.burningall.com/at-compare/">demo</a></p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div></pre></td><td class="code"><pre><div class="line">// 通过表单的name值对比</div><div class="line">at-compare = 'a&gt;b';</div><div class="line">at-compare = 'a&gt;=b';</div><div class="line">at-compare = 'a<span class="tag">&lt;<span class="name">b';</span></span></div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&lt;=b'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a==b'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a===b'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a!=b'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a!==b'</span>;</div><div class="line"></div><div class="line">// 对比数字</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&gt;10'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&gt;=20'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&lt;30'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&lt;=40'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a==50'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a===60'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a!=70'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a!==80'</span>;</div><div class="line"></div><div class="line">// 对比字符串</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&gt;"10"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&gt;="20"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&lt;"30"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a&lt;="40"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a=="50"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a==="60"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a!="70"'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a!=="80"'</span>;</div><div class="line"></div><div class="line">// 直接对比$<span class="attr">scope</span>下的值,通过 <span class="attr">in</span> $<span class="attr">scope</span> 或 <span class="attr">in</span> <span class="attr">scope</span></div><div class="line">$<span class="attr">scope.test</span> = <span class="string">50;</span></div><div class="line"></div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a &gt; test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a &gt;= test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a &lt; test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a &lt;= test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a == test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a === test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a != test in $scope'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'a !== test in $scope'</span>;</div><div class="line"></div><div class="line">// 对比的位置可以对换</div><div class="line"></div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope &gt; a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope &gt;= a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope &lt; a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope &lt;= a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope == a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope === a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope != a'</span>;</div><div class="line"><span class="attr">at-compare</span> = <span class="string">'test in $scope !== a'</span>;</div></pre></td></tr></table></figure>
 <h4 id="常用的场景"><a href="#常用的场景" class="headerlink" title="常用的场景"></a>常用的场景</h4><ul>
 <li>确认密码</li>
@@ -353,6 +353,28 @@
 
                 <!-- Post Comments -->
                 
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2016/04/07/写了几个AngularJS的小模块/" 
+            data-url="http://www.burningall.com//2016/04/07/写了几个AngularJS的小模块/index.html"
+            data-title="写了几个AngularJS的小模块"></div>
+    <!-- 多说评论框 end -->
+</div>
+
 
 
             </div>
@@ -473,8 +495,8 @@
     <!-- Pages  -->
 	
 		<li>
-			<a href="/about" title="about">
-				about
+			<a href="/about" title="关于我">
+				关于我
 			</a>
 		</li>
 	
@@ -598,7 +620,7 @@ It will not impact the appearance and can give developers a lot of support :)
 
 
 		<!--Copyright-->
-		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;axetroy's blog</div>
+		<div id="copyright">Copyright&nbsp;©&nbsp;<script type="text/javascript">var fd = new Date();document.write(fd.getFullYear());</script>&nbsp;Axetroy的幻想乡</div>
 
 		<!-- Paradox Footer Right Section -->
 
@@ -648,11 +670,27 @@ It will not impact the appearance and can give developers a lot of support :)
 </script>
 
 
+	<script src="/js/smoothscroll.js"></script>
 
 
 
 
 
+
+
+    <!-- 多说公共 js 代码 start -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:"Axetroy"};
+        (function() {
+            var ds = document.createElement('script');
+            ds.type = 'text/javascript';ds.async = true;
+            ds.src = 'https://static.duoshuo.com/embed.js';
+            ds.charset = 'UTF-8';
+            (document.getElementsByTagName('head')[0] 
+             || document.getElementsByTagName('body')[0]).appendChild(ds);
+        })();
+    </script>
+    <!-- 多说公共 js 代码 end -->
 
 
 
