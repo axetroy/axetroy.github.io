@@ -1,10 +1,10 @@
 {
   "main.css": "static/css/main.33aeb709.css",
   "main.css.map": "static/css/main.33aeb709.css.map",
-  "main.js": "static/js/main.deb93872.js",
-  "main.js.map": "static/js/main.deb93872.js.map",
-  "static/media/octicons.eot": "static/media/octicons.7b3fd4b1.eot",
-  "static/media/octicons.svg": "static/media/octicons.9e5cc6ea.svg",
-  "static/media/octicons.ttf": "static/media/octicons.ed294b22.ttf",
-  "static/media/octicons.woff": "static/media/octicons.260ef443.woff"
+  "main.js": "static/js/main.c2e8e218.js",
+  "main.js.map": "static/js/main.c2e8e218.js.map",
+  "static\\media\\octicons.eot": "static/media/octicons.7b3fd4b1.eot",
+  "static\\media\\octicons.svg": "static/media/octicons.9e5cc6ea.svg",
+  "static\\media\\octicons.ttf": "static/media/octicons.ed294b22.ttf",
+  "static\\media\\octicons.woff": "static/media/octicons.260ef443.woff"
 }
